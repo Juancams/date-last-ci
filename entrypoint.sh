@@ -36,11 +36,20 @@ if [ "$SHOW_HOUR" == "true" ]; then
   DATE_STRING+=$(date -u +"%r")
 fi
 
-BADGE_STRING="![distro](https://img.shields.io/badge/Last%20CI-$DATE_STRING-$COLOR)"
+JSON_CONTENT=$(jq -n \
+  --arg label "Last CI" \
+  --arg message "$DATE_STRING" \
+  --arg color "$COLOR" \
+  '{
+    "schemaVersion": 1,
+    "label": $label,
+    "message": $message,
+    "color": $color
+  }')
 
 JSON_PAYLOAD=$(jq -n \
   --arg filename "$GIST_FILENAME" \
-  --arg content "$BADGE_STRING" \
+  --arg content "$JSON_CONTENT" \
   '{
     "files": {
       ($filename): {
