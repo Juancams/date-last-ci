@@ -1,16 +1,16 @@
 name: 'Date Action CI'
-description: 'Create a badge with the date for the last CI run'
-author: ' Juan Carlos Manzanares Serrano'
+description: 'Gets the date of the last time the CI was passed. There are different formats, which you upload to gist and then use it in a badge inside your README.md file or other files where you want to display it.. Inspired in of https://github.com/Schneegans/dynamic-badges-action'
+author: 'Juan Carlos Manzanares Serrano'
 
 inputs:
   gist_id:
-    description: 'gist ID'
+    description: 'Gist ID of the repository where your file is located'
     requred: true
   gist_token:
-    description: 'gist token'
+    description: 'Token generated on github with access to gist'
     required: true
   gist_filename:
-    description: 'gist filename'
+    description: 'Name of the file hosted in gist'
     required: false
     default: date.json
   color:
@@ -18,19 +18,19 @@ inputs:
     required: false
     default: 'blue'
   show_year:
-    description: 'Show year'
+    description: 'The year is displayed in the date message'
     required: false
     default: true
   show_month:
-    description: 'Show month'
+    description: 'The month is displayed in the date message'
     required: false
     default: true
   show_day:
-    description: 'Show day'
+    description: 'The day number is displayed in the date message'
     required: false
     default: true
   show_hour:
-    description: 'Show hour'
+    description: 'The hour with minutes is displayed in the date message'
     required: false
     default: true
 

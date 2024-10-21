@@ -33,7 +33,7 @@ if [ "$SHOW_HOUR" == "true" ]; then
   if [ -n "$DATE_STRING" ]; then
     DATE_STRING+=" "
   fi
-  DATE_STRING+=$(date -u +"%r")
+  DATE_STRING+=$(date -u +"%r %Z")
 fi
 
 JSON_CONTENT=$(jq -n \
