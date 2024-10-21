@@ -1,0 +1,43 @@
+name: 'Date Action CI'
+description: 'Create a badge with the date for the last CI run'
+author: ' Juan Carlos Manzanares Serrano'
+
+inputs:
+  gist_id:
+    description: 'gist ID'
+    requred: true
+  gist_token:
+    description: 'gist token'
+    required: true
+  color:
+    description: 'Color for the badge'
+    required: false
+    default: 'blue'
+  show_year:
+    description: 'Show year'
+    required: false
+    default: true
+  show_month:
+    description: 'Show month'
+    required: false
+    default: true
+  show_day:
+    description: 'Show day'
+    required: false
+    default: true
+  show_day:
+    description: 'Show hour'
+    required: false
+    default: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.color }}
+    - ${{ inputs.show_year }}
+    - ${{ inputs.show_month }}
+    - ${{ inputs.show_day }}
+    - ${{ inputs.show_hour }}
+    - ${{ inputs.gist_id }}
+    - ${{ inputs.gist_token }}
