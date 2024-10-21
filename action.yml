@@ -1,5 +1,5 @@
 name: 'Date Action CI'
-description: 'Gets the date of the last time the CI was passed. There are different formats, which you upload to gist and then use it in a badge inside your README.md file or other files where you want to display it.. Inspired in of https://github.com/Schneegans/dynamic-badges-action'
+description: 'Gets the date of the last time the CI was passed. Inspired in of https://github.com/Schneegans/dynamic-badges-action'
 author: 'Juan Carlos Manzanares Serrano'
 
 inputs:
