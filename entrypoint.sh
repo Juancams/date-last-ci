@@ -17,21 +17,21 @@ fi
 
 if [ "$SHOW_MONTH" == "true" ]; then
   if [ -n "$DATE_STRING" ]; then
-    DATE_STRING+="%20"
+    DATE_STRING+=" "
   fi
   DATE_STRING+=$(date -u +"%b")
 fi
 
 if [ "$SHOW_DAY" == "true" ]; then
   if [ -n "$DATE_STRING" ]; then
-    DATE_STRING+="%20"
+    DATE_STRING+=" "
   fi
   DATE_STRING+=$(date -u +"%d")
 fi
 
 if [ "$SHOW_HOUR" == "true" ]; then
   if [ -n "$DATE_STRING" ]; then
-    DATE_STRING+="%20"
+    DATE_STRING+=" "
   fi
   DATE_STRING+=$(date -u +"%r")
 fi
