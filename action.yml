@@ -29,7 +29,7 @@ inputs:
     description: 'Show day'
     required: false
     default: true
-  show_day:
+  show_hour:
     description: 'Show hour'
     required: false
     default: true
