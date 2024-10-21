@@ -9,6 +9,10 @@ inputs:
   gist_token:
     description: 'gist token'
     required: true
+  gist_filename:
+    description: 'gist filename'
+    required: false
+    default: date.json
   color:
     description: 'Color for the badge'
     required: false
@@ -41,3 +45,4 @@ runs:
     - ${{ inputs.show_hour }}
     - ${{ inputs.gist_id }}
     - ${{ inputs.gist_token }}
+    - ${{ inputs.gist_filename }}
